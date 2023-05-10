@@ -51,13 +51,17 @@ class _QuizPageState extends State<QuizPage> {
                 Container(
                   decoration: BoxDecoration(
                       border: Border.all(
-                    color: Colors.white,
+                    color: Colors.green,
                     style: BorderStyle.solid,
                     width: 2.0,
                   )),
                   child: Text(
                     "${_quizBrain.SeriarNoQuestion[questionNumber]}",
-                    style: TextStyle(fontSize: 25, color: Colors.red),
+                    style: TextStyle(
+                      fontSize: 25, 
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold
+                      ),
                   ),
                 ),
                 SizedBox(
@@ -294,46 +298,49 @@ class _QuizPageState extends State<QuizPage> {
                   height: 20,
                 ),
                 Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      MaterialButton(
-                        color: Colors.blueGrey,
-                        onPressed: () {
-                          setState(() {
-                            questionNumber = 0;
-                            finalScore = 0;
-                          });
-                        },
-                        child: Text(
-                          "Reset",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 90,right: 90),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        MaterialButton(
+                          color: Colors.blueGrey,
+                          onPressed: () {
+                            setState(() {
+                              questionNumber = 0;
+                              finalScore = 0;
+                            });
+                          },
+                          child: Text(
+                            "Reset",
+                            style: TextStyle(
+                              color: Colors.red,
+                              fontSize: 18,
+                            ),
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      MaterialButton(
-                        color: Colors.blueGrey,
-                        onPressed: () {
-                          Navigator.pop(context);
-                          setState(() {
-                            questionNumber = 0;
-                            finalScore = 0;
-                          });
-                        },
-                        child: Text(
-                          "Quit",
-                          style: TextStyle(
-                            color: Colors.red,
-                            fontSize: 18,
+                        SizedBox(
+                          height: 20,
+                        ),
+                        MaterialButton(
+                          color: Colors.blueGrey,
+                          onPressed: () {
+                            Navigator.pop(context);
+                            setState(() {
+                              questionNumber = 0;
+                              finalScore = 0;
+                            });
+                          },
+                          child: Text(
+                            "Quit",
+                            style: TextStyle(
+                              color: Colors.yellow,
+                              fontSize: 18,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 )
               ],
