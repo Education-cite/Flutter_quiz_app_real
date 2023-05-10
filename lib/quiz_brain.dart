@@ -1,6 +1,6 @@
 
 class QuizBrain{
-var images = ["Question1","Question2","Question3","Question4"];
+var SeriarNoQuestion = ["Question1","Question2","Question3","Question4"];
 
 var questions = [
 "What of the following is the default value of a local variable ?",

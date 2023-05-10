@@ -56,7 +56,7 @@ class _QuizPageState extends State<QuizPage> {
                     width: 2.0,
                   )),
                   child: Text(
-                    "${_quizBrain.images[questionNumber]}",
+                    "${_quizBrain.SeriarNoQuestion[questionNumber]}",
                     style: TextStyle(fontSize: 25, color: Colors.red),
                   ),
                 ),
@@ -80,7 +80,7 @@ class _QuizPageState extends State<QuizPage> {
                   height: 10,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 20, right: 20),
+                  padding: EdgeInsets.only(left: 60, right: 60),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
@@ -187,7 +187,7 @@ class _QuizPageState extends State<QuizPage> {
                   height: 20,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 20, right: 20),
+                  padding: EdgeInsets.only(left: 60, right: 60),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
